@@ -22,6 +22,6 @@ urlpatterns = [
     path('', include('articles.urls')),
     path('admin/', admin.site.urls),
     path('grappelli/', include('grappelli.urls')),
-    path('', include('django.contrib.auth.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
     path('signup/', views.signup)
 ]

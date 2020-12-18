@@ -15,7 +15,7 @@ class Article(models.Model):
 class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete = models.CASCADE)
     author_name = models.TextField('афффтор')
-    comment_text = models.CharField('коммент зис', max_length = 20)
+    comment_text = models.TextField('коммент зис')
     
     def __str__(self):
         return self.author_name
