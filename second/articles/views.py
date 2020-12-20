@@ -15,22 +15,11 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('/choose_purse')
+            return redirect('/api/Article')
     else:
         form = UserCreationForm()
 
     return render(request, 'signup.html', {'form': form})
-
-def index(request):
-    latest_artiles_list = Article.objects.order_by('-pub_date')[:5]
-    return render(request, 'articles/list.html', {'latest_artiles_list': latest_artiles_list})
-
-def detail(request, article_id):
-    try:
-        a = Article.objects.get(id = article_id)
-    except:
-        raise Http404("Чек лист не найден")
-    render(request, 'articles/detail.html', {'article': a})
 
 class ArticleListCreate(generics.ListCreateAPIView):
      queryset = Article.objects.all()

@@ -1,17 +1,17 @@
-{% extends 'base.html' %}
+<!--{% extends 'base.html' %}-->
 
-{% block title %}Последние чеклисты{% endblock %}
+<!--{% block title %}Последние чеклисты{% endblock %}-->
 
-{% block content %}
+<!--{% block content %}-->
 
-    {% if latest_articles_list %}
+<!--    {% if latest_articles_list %}-->
 
-        {% for a in latest_articles_list %}
-            <a href="{% url 'articles:detail' a.id %}">{{a.article_title}}</a>
-        {% endfor %}
+<!--        {% for a in latest_articles_list %}-->
+<!--            <a href="{% url 'articles:detail' a.id %}">{{a.article_title}}</a>-->
+<!--        {% endfor %}-->
 
-    {% else %}
-        Чеклисты не найдены
-    {% endif %}
+<!--    {% else %}-->
+<!--        Чеклисты не найдены-->
+<!--    {% endif %}-->
 
-{% endblock %}
+<!--{% endblock %}-->
