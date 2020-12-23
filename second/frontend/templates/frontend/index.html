@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <style type="text/css">
+         body {
+         top:15%;
+         width: 50%;
+         margin-left: 25%;
+         background-color: #c8caca;
+         }
+         .content {
+         margin-top: 15%;
+         border: 1px solid;
+         background-color: #f2f2f1;
+         padding-left: 15px;
+         }
+         .container-fluid {
+         padding-left: 0;
+         }
+         .container-fluid .row {
+         padding-left: 15px;
+         }
+         .stat {
+         position: fixed;
+         top: 0;
+         background-color: #c8caca;
+         z-index: 2;
+         }
+         .bar {
+         top:5%;
+         height: 5%;
+         width:100%;
+         }
+         .logo{
+         height: 9%;
+         width: 50%;
+         img {
+         /*max-width: 100%;*/
+         /*height: 30%;*/
+         /*width: 50%;*/
+         }
+         }
+      </style>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Django REST with React</title>
 </head>
 <body>
-        <div id="app">
-        <!-- React will load here -->
-        </div>
+        <span class="border">
+	  <div class="bar bth-group d-flex p-1" role="group">
+	     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active bg-white text-dark" id="pills-main-tab" data-toggle="pill" href="#pills-main" role="tab" aria-controls="pills-main" aria-selected="true">Главная</a>
+  </li>
+  <li class="nav-item" role="presentation">
+        <a class="nav-link active bg-white text-dark" id="pills-about us-tab" data-toggle="pill" href="auth/login" aria-controls="pills-about bs" aria-selected="false">Личный кабинет</a>
+  </li>
+    <li class="nav-item" role="presentation">
+    <a class="nav-link bg-white text-dark" id="pills-contact-tab" data-toggle="pill" href="frontend/" role="tab" aria-controls="pills-contact" aria-selected="false">Создать инфопродукт</a>
+  </li>
+       <li class="nav-item" role="presentation">
+    <a class="nav-link bg-white text-dark" id="pills-data-tab" data-toggle="pill" href="api/Article" role="tab" aria-controls="pills-contact" aria-selected="false">Сохранить инфопродукт</a>
+  </li>
+</ul>
+</span>
+	  </div>
+      <div class="container-fluid content ">
+         <p>
+            Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+            Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+         </p>
+      </div>
+
+
+<!--        <div id="app">-->
+<!--        &lt;!&ndash; React will load here &ndash;&gt;-->
+<!--        </div>-->
 </body>
+
         {% load static %}
-        <script src= "{% static  "frontend/main.js"  %} " ></script>
+        <script src="static/frontend/main.js"></script>
 </html>

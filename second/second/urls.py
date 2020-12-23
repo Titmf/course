@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('grappelli/', include('grappelli.urls')),
     path('auth/', include('django.contrib.auth.urls')),
-    path('signup/', views.signup)
+    path('signup/', views.signup),
+
 ]
